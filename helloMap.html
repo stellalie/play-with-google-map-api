@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJKnqBC0UdnZlQ0IJ7RzRyiBvlhxwwPZY&sensor=false"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/helloInfoWindow.js"></script>
+    <script type="text/javascript" src="js/helloMap.js"></script>
+    <style>
+        #wrapper {
+            width: 800px;
+            height: 600px;
+            margin: 100px auto 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="infoWindowContent" style="display: none;">
+            <div>Welcome to the world!</div>
+            <div id="hiddenContent" style="padding: 20px; background: #333; color: white; display: none;">
+                <img src="http://placehold.it/350x150" />
+                <p>Look I'm resizing!!!!</p>
+            </div>
+            <a id="hiddenContentHandler" onclick='$("#infoWindowContent").trigger("clickOpen");' href="#">Open</a>
+        </div>
+        <div id="map-canvas"/>
+    </div>
+</body>
+</html>
